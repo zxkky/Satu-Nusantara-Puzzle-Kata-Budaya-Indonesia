@@ -37,6 +37,7 @@
 satu-nusantara/
 ├── puzzle_kata.py          # File utama game (source code)
 ├── puzzle_kata.spec        # Konfigurasi build PyInstaller
+├── puzzle_kata.exe         # Executable hasil build
 ├── build/
 │   └── puzzle_kata/        # File hasil proses build (otomatis)
 │       ├── base_library.zip
@@ -47,9 +48,7 @@ satu-nusantara/
 │       ├── PYZ-00.toc
 │       ├── warn-puzzle_kata.txt
 │       └── xref-puzzle_kata.html
-└── dist/                   # Output siap pakai / distribusi
-    ├── puzzle_kata.exe     # Executable hasil build
-    ├── puzzle_kata.spec    # Salinan spec di dist
+└── dist/                   # Folder output PyInstaller
     ├── words.txt           # Daftar kata soal (dibuat otomatis)
     ├── users.json          # Data akun pengguna (dibuat otomatis)
     ├── scores.json         # Data leaderboard (dibuat otomatis)
