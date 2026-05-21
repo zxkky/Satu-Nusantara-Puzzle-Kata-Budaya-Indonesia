@@ -35,29 +35,43 @@
 
 ```
 satu-nusantara/
-├── puzzle_kata.py          # File utama game
+├── puzzle_kata.py          # File utama game (source code)
 ├── puzzle_kata.spec        # Konfigurasi build PyInstaller
-├── words.txt               # Daftar kata soal (dibuat otomatis)
-├── users.json              # Data akun pengguna (dibuat otomatis)
-├── scores.json             # Data leaderboard (dibuat otomatis)
-├── images/                 # Gambar soal (.png, nama = kata)
-│   ├── wayang.png
-│   ├── reog.png
-│   ├── kebaya.png
-│   └── ...
-└── aset/                   # Aset UI (background, ikon, suara)
-    ├── 20251106_210830_0000.png    # Background layar login & menu
-    ├── 20251106_212923_0000.png    # Background layar game
-    ├── admin.png                   # Background panel admin
-    ├── correct-choice-43861.mp3    # Suara jawaban benar
-    ├── fail-144746.mp3             # Suara jawaban salah
-    ├── winner-game-sound-404167.mp3 # Suara menang ronde
-    ├── failure-drum-sound-effect-2-7184.mp3 # Suara game over
-    ├── play.png / podium.png / logout.png   # Ikon tombol menu
-    ├── user.png / key.png                   # Ikon input login
-    ├── edit.png / delete.png                # Ikon admin panel
-    └── ...
+├── build/
+│   └── puzzle_kata/        # File hasil proses build (otomatis)
+│       ├── base_library.zip
+│       ├── EXE-00.toc
+│       ├── PKG-00.toc
+│       ├── puzzle_kata.pkg
+│       ├── PYZ-00.pyz
+│       ├── PYZ-00.toc
+│       ├── warn-puzzle_kata.txt
+│       └── xref-puzzle_kata.html
+└── dist/                   # Output siap pakai / distribusi
+    ├── puzzle_kata.exe     # Executable hasil build
+    ├── puzzle_kata.spec    # Salinan spec di dist
+    ├── words.txt           # Daftar kata soal (dibuat otomatis)
+    ├── users.json          # Data akun pengguna (dibuat otomatis)
+    ├── scores.json         # Data leaderboard (dibuat otomatis)
+    ├── images/             # Gambar soal (.png, nama file = kata)
+    │   ├── wayang.png
+    │   ├── reog.png
+    │   ├── kebaya.png
+    │   └── ...
+    └── aset/               # Aset UI (background, ikon, suara)
+        ├── 20251106_210830_0000.png     # Background layar login & menu
+        ├── 20251106_212923_0000.png     # Background layar game
+        ├── admin.png                    # Background panel admin
+        ├── correct-choice-43861.mp3     # Suara jawaban benar
+        ├── fail-144746.mp3              # Suara jawaban salah
+        ├── winner-game-sound-404167.mp3 # Suara menang ronde
+        ├── failure-drum-sound-effect-2-7184.mp3  # Suara game over
+        ├── play.png / podium.png / logout.png    # Ikon tombol menu
+        ├── user.png / key.png                    # Ikon input login
+        └── edit.png / delete.png                 # Ikon admin panel
 ```
+
+> **Catatan:** Saat menjalankan dari source (`puzzle_kata.py`), letakkan folder `images/` dan `aset/` di direktori yang sama dengan file `.py`. Folder `build/` dan `dist/` hanya dibutuhkan untuk proses PyInstaller.
 
 ---
 
